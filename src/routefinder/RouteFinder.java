@@ -88,7 +88,7 @@ public class RouteFinder implements IRouteFinder {
         Map<String, Map<String, String>> busRoutesUrls = new HashMap<>();
         String webPage = getUrlsText(TRANSIT_WEB_URL);
 
-        String regex = "<td><a href=\"(.*?)\">(.*?)</a></td>\\s*?<td>.*? to (.*?)</td>";
+        String regex = "<td><a href=\"(.*?)\".*?>(.*?)</a></td>\\s*?<td>.*? to (.*?)</td>";
         Pattern compile = compile(regex);
         Matcher matcher = compile.matcher(webPage);
 
